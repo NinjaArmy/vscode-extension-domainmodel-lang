@@ -1,0 +1,25 @@
+{
+    "name": "domainmodel-lang",
+    "displayName": "Domainmodel Lang",
+    "description": "Syntax highlighting for Domainmodel lang",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.64.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "dmodel",
+            "aliases": ["Dmodel", "dmodel"],
+            "extensions": [".dmodel"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "dmodel",
+            "scopeName": "text.dmodel",
+            "path": "./syntaxes/dmodel.tmLanguage.json"
+        }]
+    }
+}

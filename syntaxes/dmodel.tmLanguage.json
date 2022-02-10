@@ -1,0 +1,49 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Dmodel",
+	"fileTypes": [
+		"dmodel"
+	],
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#general"
+		}
+	],
+	"repository": {
+		"general": {
+			"patterns": [
+				{
+					"include": "#linecomment"
+				},
+				{
+					"include": "#blockcomment"
+				},
+				{
+					"include": "#keyword"
+				}
+			]
+		},
+		"linecomment": {
+			"name": "comment.line.double-dash.dmodel",
+			"begin": "(^[ \\t]+)?(?=//)",
+			"end": "(?=$)"
+		},
+		"blockcomment": {
+			"name": "comment.block.dmodel",
+			"begin": "/\\*(\\*)?(?!/)",
+			"end": "\\*/"
+		},
+		"keyword": {
+			"name": "keyword.control.mydsl",
+			"match": "\\b(entity|datatype)\\b|!"
+	 
+		}
+	},
+	"scopeName": "text.dmodel"
+}
